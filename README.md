@@ -61,26 +61,26 @@ universitydb.json
 ```
 ## API : โดยผมใช้โปรแกรม Postman ในการทดสอบ
 ### students
-เป็นการ return ข้อมูลของนักศึกษาทั้งหมด โดยการพิม localhost:3000/students แบบ GET
+เป็นการ return ข้อมูลของนักศึกษาทั้งหมด โดยการพิมพ์ localhost:3000/students แบบ GET
 ```
 app.get('/students', (req, res) => {
     res.json(students)
 })
 ```
-เป็นการ return ข้อมูลของนักศึกษาแบบมีเงื่อนไข โดยเงื่อนไขคือ return ข้อมูลของนักศึกษาที่มี id ตรงกับใน database โดยการพิม localhost:3000/students/61130500096(Ex.) แบบ GET
+เป็นการ return ข้อมูลของนักศึกษาแบบมีเงื่อนไข โดยเงื่อนไขคือ return ข้อมูลของนักศึกษาที่มี id ตรงกับใน database โดยการพิมพ์ localhost:3000/students/61130500096(Ex.) แบบ GET
 ```
 app.get('/students/:id', (req, res) => {
     res.json(students.find(student => student.id === req.params.id))
 })
 ```
-เป็นการ เพิ่มนักศึกษา โดยการพิม localhost:3000/students แบบ POST เพิ่มข้อมูลลงใน Body แล้วกด Send
+เป็นการ เพิ่มนักศึกษา โดยการพิมพ์ localhost:3000/students แบบ POST เพิ่มข้อมูลลงใน Body แล้วกด Send
 ```
 app.post('/students', (req, res) => {
     students.push(req.body)
     res.status(201).json(req.body)
 })
 ```
-เป็นการ แก้ไขข้อมูลของนักศึกษาที่ id ตรงกับใน database โดยการพิม localhost:3000/students/61130500096(Ex.) 
+เป็นการ แก้ไขข้อมูลของนักศึกษาที่ id ตรงกับใน database โดยการพิมพ์ localhost:3000/students/61130500096(Ex.) 
 แบบ PUT แก้ไข้ข้อมูลลงใน Body แล้วกด Send
 ```
 app.put('/students/:id', (req, res) => {
@@ -88,7 +88,7 @@ app.put('/students/:id', (req, res) => {
     res.json(Object.assign(students[updateIndex], req.body))
 })
 ```
-เป็นการ ลบข้อมูลของนักศึกษาที่ id ตรงกับใน database โดยการพิม localhost:3000/students/61130500096(Ex.) แบบ DELETE
+เป็นการ ลบข้อมูลของนักศึกษาที่ id ตรงกับใน database โดยการพิมพ์ localhost:3000/students/61130500096(Ex.) แบบ DELETE
 ```
 app.delete('/students/:id', (req, res) => {
     const deletedIndex = students.findIndex(student => student.id === req.params.id)
@@ -97,14 +97,14 @@ app.delete('/students/:id', (req, res) => {
 })
 ```
 ### universities
-เป็นการ return ข้อมูลของมหาวิทยาลัยทั้งหมด โดยการพิม localhost:3000/universities แบบ GET
+เป็นการ return ข้อมูลของมหาวิทยาลัยทั้งหมด โดยการพิมพ์ localhost:3000/universities แบบ GET
 ```
 app.get('/universities', (req, res) => {
     res.json(universities)
 })
 ```
 เป็นการ return ข้อมูลของมหาวิทยาลัยว่ามีนักศึกษาคนไหนศึกษาอยู่ที่มหาวิทยาลัยนี้บ้าง โดยเงื่อนไขคือ return ข้อมูลของมหาวิทยาลัยที่มี id ตรงกับใน database 
-โดยการพิม localhost:3000/universities/kmutt(Ex.) แบบ GET
+โดยการพิมพ์ localhost:3000/universities/kmutt(Ex.) แบบ GET
 
 ```
 app.get('/universities/:id', (req, res) => {
@@ -119,14 +119,14 @@ app.get('/universities/:id', (req, res) => {
 })
 
 ```
-เป็นการ เพิ่มมหาวิทยาลัย โดยการพิม localhost:3000/universities แบบ POST เพิ่มข้อมูลลงใน Body แล้วกด Send
+เป็นการ เพิ่มมหาวิทยาลัย โดยการพิมพ์ localhost:3000/universities แบบ POST เพิ่มข้อมูลลงใน Body แล้วกด Send
 ```
 app.post('/universities', (req, res) => {
     universities.push(req.body)
     res.status(201).json(req.body)
 })
 ```
-เป็นการ แก้ไขข้อมูลของมหาวิทยาลัยที่ id ตรงกับใน database โดยการพิม localhost:3000/universities/kmutt(Ex.) แบบ PUT 
+เป็นการ แก้ไขข้อมูลของมหาวิทยาลัยที่ id ตรงกับใน database โดยการพิมพ์ localhost:3000/universities/kmutt(Ex.) แบบ PUT 
 แก้ไข้ข้อมูลลงใน Body แล้วกด Send
 ```
 app.put('/universities/:id', (req, res) => {
@@ -134,7 +134,7 @@ app.put('/universities/:id', (req, res) => {
     res.json(Object.assign(universities[updateIndex], req.body))
 })
 ```
-เป็นการ ลบข้อมูลของมหาวิทยาลัยที่ id ตรงกับใน database โดยการพิม localhost:3000/students/kmutt(Ex.) แบบ DELETE
+เป็นการ ลบข้อมูลของมหาวิทยาลัยที่ id ตรงกับใน database โดยการพิมพ์ localhost:3000/students/kmutt(Ex.) แบบ DELETE
 ```
 app.delete('/universities/:id', (req, res) => {
     const deletedIndex = universities.findIndex(university => university.id === req.params.id)
