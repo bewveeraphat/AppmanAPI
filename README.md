@@ -2,7 +2,8 @@
 ## Appman Internship
 ## Veeraphat Lewcharoensakkul 
 ## King Mongkut's University of Technology Thonburi (SIT)
-
+## Start - 22 Dec 2020 
+## Finish - 24 Dec 2020
 ## DB :
 เก็บข้อมูลของนักศึกษา รหัสนักศึกษา, ชื่อ-สกุล, ศึกษาปริญญาตรี และ ปริญญาโทที่ไหน
 
